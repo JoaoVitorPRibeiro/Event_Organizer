@@ -1,0 +1,83 @@
+POST http://localhost:3000/api/services
+Content-Type: application/json
+
+  {
+    "name": "Decoração",
+    "description": "Escolha a decoração para sua festa, e nós a montamos.",
+    "price": 1800,
+    "image": "https://images.unsplash.com/photo-1478146059778-26028b07395a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=892&q=80"
+  }
+
+###
+GET http://localhost:3000/api/services/
+
+###
+GET http://localhost:3000/api/services/63a301b12d6f3883f58b9698
+
+###
+DELETE http://localhost:3000/api/services/63a301b12d6f3883f58b9698
+
+###
+PUT http://localhost:3000/api/services/63a309d00b96c82e31e6902d
+Content-Type: application/json
+
+{
+    "name": "ATUALIZADO",
+    "description": "Muito bom",
+    "price": 199.90
+}
+
+###
+POST http://localhost:3000/api/parties
+Content-Type: application/json
+
+{
+    "title": "Meu evento",
+    "author": "Camille e Joao",
+    "description": "Festa de casamento",
+    "budget": 30000,
+    "image": "https://www.zankyou.com.br/images/mag-card-c/123/71e8/878/623/-/br/wp-content/uploads/2017/04/z-capa-l.jpg",
+    "services": [{
+     
+    "name": "Decoração",
+    "description": "Escolha a decoração para sua festa, e nós a montamos.",
+    "price": 500,
+    "image": "https://cdn0.casamentos.com.br/vendor/9420/3_2/960/jpg/img-5352_13_149420-164187322538140.jpeg"
+
+    },
+    {
+   "name": "Cerimonialista",
+    "description": "Cuidamos de tudo.",
+    "price": 1000,
+    "image": "https://img.freepik.com/fotos-gratis/close-de-um-dj-trabalhando-sob-a-luz-azul_181624-18773.jpg?w=2000"
+    },
+    {
+     
+    "name": "Locação do espaço",
+    "description": "Melhor espaço para cidade.",
+    "price": 5000,
+    "image": "https://cdn0.casamentos.com.br/vendor/9420/3_2/960/jpg/img-5352_13_149420-164187322538140.jpeg"
+
+    }]
+}
+
+###
+GET http://localhost:3000/api/parties
+
+###
+GET http://localhost:3000/api/parties/63a30ffc263567e0b6488982
+
+###
+DELETE http://localhost:3000/api/parties/63a311ce263567e0b6488992
+
+###
+PUT http://localhost:3000/api/parties/63a3123d263567e0b648899b
+Content-Type: application/json
+
+{
+    "title": "Casamento 2",
+    "author": "João e Camille",
+    "description": "Revisão casamento",
+    "budget": 15000,
+    "services": []
+}
